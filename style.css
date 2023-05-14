@@ -1,0 +1,135 @@
+/* general */
+
+a {
+    color: black;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    margin: 6rem;
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+hr {
+    margin: 3rem 0;
+}
+
+/* general class */
+
+.center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.w-f {
+    width: 100%;
+}
+
+.ml-1 {
+    margin-left: 1rem;
+}
+
+/* entity */
+
+div.band {
+    margin: 0;
+    min-width: 100%;
+    background-color: #D9F1FE;
+    padding: 0.8rem 0;
+}
+
+div.holder {
+    margin: 3rem 0;
+}
+
+div.holder-title {
+    min-width: 100%;
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    border-bottom: solid 1px black;
+    box-sizing: border-box;
+}
+
+div.holder-content {
+    display: none;
+    padding: 0.5rem;
+}
+
+/* main */
+
+#main {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+/* header */
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: black;
+    background-color: white;
+}
+
+#header div {
+    margin: 0.8rem 1.2rem;
+}
+
+#header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#header-title {
+    margin-right: auto !important;
+    font-size: 1.3rem;
+}
+
+/* animation */
+
+@keyframes white-to-black {
+    0% {
+        color: black;
+        background-color: white;
+    }
+    
+    100% {
+        color: white;
+        background-color: #111;
+    }
+}
+
+@keyframes black-to-white {
+    0% {
+        color: white;
+        background-color: #111;
+    }
+    
+    100% {
+        color: black;
+        background-color: white;
+    }
+}
