@@ -6,6 +6,7 @@ a {
 
 body {
     margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 h1 {
@@ -41,6 +42,10 @@ hr {
 
 .ml-1 {
     margin-left: 1rem;
+}
+
+.pl-1 {
+    padding-left: 1rem;
 }
 
 /* entity */
