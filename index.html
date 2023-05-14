@@ -6,14 +6,6 @@
 <link rel="stylesheet" href="./style.css">
 <title>MeiriSTG 公式サイト</title>
 
-<div id="header">
-    <div id="header-title"><a href="./index.html">MeiriSTG - 公式サイト</a></div>
-    <div><a href="./index.html">ホーム</a></div>
-    <div><a href="./sub/tool.html">ツール</a></div>
-    <div><a href="./sub/archive.html">過去の試合</a></div>
-    <div><a href="./sub/credit.html">クレジット</a></div>
-</div>
-
 <h1 class="center">MeiriSTG 公式サイト</h1>
 
 <div class="band">
@@ -29,7 +21,7 @@
         <li>2023/04/01 過去の試合を更新しました。</li>
     </ul>
 
-    <a href="./sub/old-info.html">過去のお知らせを表示</a>
+    <p><a href="./sub/old-info.html">過去のお知らせを表示</a></p>
 
     <hr>
 
@@ -38,11 +30,17 @@
     <div class="center">
         <iframe
             src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&showTitle=0&showNav=1&showTz=0&showCalendars=1&showPrint=0&showDate=0&showTabs=0&src=NjVkYzEyYjJlZjM2ZmI4MmE5ZDc0MTczNDFjYzY2OGY1NzEzMjY3M2ZmOWRkNTg5NjZiNDlmOGRkOGZhMjkxZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23009688"
-            style="border:solid 1px #777" width="500" height="400" frameborder="0" scrolling="no"></iframe>
+            style="border:solid 1px #777" width="400" height="400" frameborder="0" scrolling="no"></iframe>
         <iframe
             src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&showTitle=0&showNav=1&showTz=0&showCalendars=1&showPrint=0&showDate=0&showTabs=0&mode=AGENDA&src=NjVkYzEyYjJlZjM2ZmI4MmE5ZDc0MTczNDFjYzY2OGY1NzEzMjY3M2ZmOWRkNTg5NjZiNDlmOGRkOGZhMjkxZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23009688"
-            style="border:solid 1px #777" width="500" height="400" frameborder="0" scrolling="no"></iframe>
+            style="border:solid 1px #777" width="400" height="400" frameborder="0" scrolling="no"></iframe>
     </div>
 </div>
 
 <script src="./js/header.js"></script>
+<script src="./js/sidebar.js"></script>
+<script>
+    create_header("ホーム", "./");
+    create_sidebar("ホーム", "./");
+</script>
+<script src="./js/change_color.js"></script>

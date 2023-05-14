@@ -87,6 +87,10 @@ div.holder-content {
 
 /* header */
 
+#header-narrow {
+    display: none;
+}
+
 #header {
     position: fixed;
     top: 0;
@@ -113,6 +117,12 @@ div.holder-content {
     font-size: 1.3rem;
 }
 
+/* sidebar */
+
+#sidebar {
+    display: none;
+}
+
 /* animation */
 
 @keyframes white-to-black {
@@ -120,7 +130,7 @@ div.holder-content {
         color: black;
         background-color: white;
     }
-    
+
     100% {
         color: white;
         background-color: #111;
@@ -132,9 +142,102 @@ div.holder-content {
         color: white;
         background-color: #111;
     }
-    
+
     100% {
         color: black;
         background-color: white;
+    }
+}
+
+/* responsive */
+
+@media screen and (max-width: 1000px) {
+
+    /* general */
+
+    h1 {
+        font-size: 2em;
+        margin: 5rem auto;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    /* main */
+
+    #main {
+        padding: 0 1rem;
+    }
+
+    /* header */
+
+    #header {
+        display: none;
+    }
+
+    #header-narrow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        display: flex;
+        color: black;
+        background-color: white;
+    }
+
+    #header-narrow div {
+        margin: 1rem;
+        margin-left: 0;
+    }
+
+    #header-narrow a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    #header-title-narrow {
+        font-size: 1.1rem;
+    }
+
+    /* sidebar */
+
+    #sidebar-background {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        min-width: 100%;
+        min-height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    #sidebar {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        min-width: 14rem;
+        min-height: 100%;
+        background-color: #222;
+    }
+
+    #sidebar div {
+        color: white;
+        margin: 1rem 2rem;
+    }
+
+    #sidebar div a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    div#sidebar-icon-open,
+    div#sidebar-icon-close {
+        margin: 1rem;
+        cursor: pointer;
+        user-select: none;
     }
 }

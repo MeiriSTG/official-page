@@ -1,31 +1,32 @@
-// a flag that is true when header is animating.
-let is_animating = false;
-// a variable to save the current color.
-const WHITE = 0;
-const BLACK = 1;
-let current_color = WHITE;
+// a function to create a header and append it into body.
+function create_header(current, root) {
+    const links = [
+        ["index.html", "ホーム"],
+        ["sub/tool.html", "ツール"],
+        ["sub/archive.html", "過去の試合"],
+        ["sub/credit.html", "クレジット"],
+    ];
 
-// get a header div and set an event to raise is_animating flag.
-const header = document.getElementById("header");
-header.onanimationend = () => is_animating = false;
+    const header = document.createElement("div");
+    header.id = "header";
+    document.body.appendChild(header);
 
-// set a window scroll event.
-window.onscroll = () => {
-    // when the header is animating, nothing happens.
-    if (is_animating)
-        return;
-    // otherwise.
-    const scroll = window.scrollY;
-    if (scroll < 200) {
-        if (current_color === WHITE)
-            return;
-        header.style.animation = "black-to-white 0.1s linear forwards";
-        current_color = WHITE;
-    } else {
-        if (current_color === BLACK)
-            return;
-        header.style.animation = "white-to-black 0.1s linear forwards";
-        current_color = BLACK;
+    const header_title = document.createElement("div");
+    header_title.id = "header-title";
+    header.appendChild(header_title);
+    const a_header_title = document.createElement("a");
+    a_header_title.href = root + "index.html";
+    a_header_title.innerText = "MeiriSTG - 公式サイト";
+    header_title.appendChild(a_header_title);
+
+    for (const link of links) {
+        const div = document.createElement("div");
+        header.appendChild(div);
+        
+        const a = document.createElement("a");
+        a.href = root + link[0];
+        a.innerText = link[1];
+        if (current === link[1]) a.style.fontWeight = "bold";
+        div.appendChild(a);
     }
-    is_animating = true;
-};
+}
