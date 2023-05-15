@@ -40,12 +40,28 @@ hr {
     width: 100%;
 }
 
+.w-0 {
+    width: 0;
+}
+
 .ml-1 {
     margin-left: 1rem;
 }
 
+.p-1 {
+    padding: 1rem;
+}
+
 .pl-1 {
     padding-left: 1rem;
+}
+
+.fs-2_5 {
+    font-size: 2.5rem;
+}
+
+.nowrap {
+    white-space: nowrap;
 }
 
 /* entity */
