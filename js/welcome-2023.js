@@ -1,6 +1,6 @@
 // This script uses fetch API. So, you must run this on some servers.
 
-fetch("/data/all-clear-score.json")
+fetch("/official-page/data/all-clear-score.json")
     .then(r => r.text())
     .then(s => JSON.parse(s))
     .then(score_table => {
