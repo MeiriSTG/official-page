@@ -64,6 +64,6 @@ function create_sidebar(current, root) {
     const a_title = document.createElement("a");
     a_title.id = "header-title-narrow";
     a_title.href = root + "index.html";
-    a_title.innerText = "MeiriSTG - 公式サイト";
+    a_title.innerText = "MeiriSTG 公式サイト";
     title.appendChild(a_title);
 }
