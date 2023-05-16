@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosansjp.css">
+<link rel="stylesheet" href="../style.css">
+<title>明理新歓大会 2023：MeiriSTG 公式サイト</title>
+
+<h1 class="center">明理新歓大会 2023</h1>
+
+<div id="main">
+    <h3>大会概要</h3>
+
+    <p>明理新歓大会 2023は、東方明治楼及び東方理學団のメンバーを中心とするプレイヤーの交流を目的とした、東方STGの大会です。</p>
+    <p>試合は３人（または２人）のチームによるリアルタイム並走形式で行われます。</p>
+    <p>一般には公開していない大会ですので、STGにあまり自信のない方もこの機会にぜひご参加ください！</p>
+    <p>大会の様子はYouTube Liveにて限定公開します。STGをプレイしていない方は是非コメントで大会を盛り上げてください！</p>
+    <p></p>
+    <p>明理新歓大会 2023　主催一同</p>
+    
+    <hr>
+    
+    <h3>日時</h3>
+    
+    <p>2023年6月10日（土） 21:00～</p>
+    <p>2023年6月17日（土） 21:00～</p>
+    <p>2023年6月24日（土） 21:00～（予備日）</p>
+    <p>※配信開始は開始時刻の10分前です。</p>
+    
+    <hr>
+    
+    <h3>参加費</h3>
+    
+    <p>無料（団体からの出費あり）</p>
+    
+    <hr>
+    
+    <h3>担当</h3>
+    
+    <ul>
+        <li>配信者（主審）</li>
+        <li>審判員（副審）</li>
+        <li>実況者</li>
+        <li>選手</li>
+    </ul>
+    
+    <hr>
+    
+    <h3>参加資格</h3>
+    
+    <ul>
+        <li>［選手］試合当日までに、十分な練習時間を確保できる方。</li>
+        <li>［選手］DiscordのGo Live機能を使用してゲーム画面を常に配信できる方（音声含む）。</li>
+    </ul>
+    
+    <hr>
+    
+    <h3>ルール</h3>
+    
+    <p>ルールは<a href="https://docs.google.com/document/d/1rNfUioMGCOR1ih1D5SXAu8v5Hm9vvim9V5EHUNG1AsU/edit?usp=sharing">こちら</a>をご覧ください。</p>
+
+    <hr>
+
+    <h3>エントリー</h3>
+    
+    <p>続報をお待ちください。</p>
+</div>
+
+<script src="../js/header.js"></script>
+<script src="../js/sidebar.js"></script>
+<script>
+    create_header("明理新歓大会 2023", "../");
+    create_sidebar("明理新歓大会 2023", "../");
+</script>
+<script src="../js/change_color.js"></script>
