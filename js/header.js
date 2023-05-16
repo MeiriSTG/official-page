@@ -17,7 +17,7 @@ function create_header(current, root) {
     header.appendChild(header_title);
     const a_header_title = document.createElement("a");
     a_header_title.href = root + "index.html";
-    a_header_title.innerText = "MeiriSTG - 公式サイト";
+    a_header_title.innerText = "MeiriSTG 公式サイト";
     header_title.appendChild(a_header_title);
 
     for (const link of links) {
