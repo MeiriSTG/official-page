@@ -29,13 +29,13 @@ fetch("/official-page/data/all-clear-score.json")
         function update_score() {
             const idx = diff_map[select_difficult.value];
             const is_continued = select_continue.value === "yes" ? true : false;
-            const basic_score = score_table[select_work.value][select_player.value][idx];
+            const k = is_continued ? 0.5 : 1.0;
+            const b = score_table[select_work.value][select_player.value][idx] * k;
             const r = is_continued ? 0 : select_rest.value;
             let score = 0;
-            score = Number(basic_score) * (1 + 0.1 * Number(r));
-            score = is_continued ? score * 0.5 : score;
+            score = Number(b) * (1 + 0.1 * Number(r));
             score = Math.round(score * 100) / 100;
-            span_formula.innerText = basic_score + " * (1 + 0.1 * " + r + ") = ";
+            span_formula.innerText = b + " * (1 + 0.1 * " + r + ") = ";
             span_score.innerText = score;
         }
 
@@ -116,6 +116,13 @@ fetch("/official-page/data/all-clear-score.json")
         select_player.onchange = () => update_score();
         select_rest.onchange = () => update_score();
         select_continue.onchange = () => update_score();
+
+        if (new URL(window.location.href).searchParams.get("for") !== "refree") {
+            const for_refrees = document.getElementsByClassName("for-refree");
+            for (const for_refree of for_refrees) {
+                for_refree.style.display = "none";
+            }
+        }
 
         update_score();
 
