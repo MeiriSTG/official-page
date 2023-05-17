@@ -5,7 +5,16 @@ fetch("/official-page/data/all-clear-score.json")
     .then(s => JSON.parse(s))
     .then(score_table => {
 
-        const input_url = document.getElementById("input-url");
+        if (new URL(window.location.href).searchParams.get("for") === "refree") {
+            document.getElementById("item-input-url").innerHTML = `
+                <td class="w-0 nowrap">送信先URL</td>
+                <td><input id="input-url" class="w-f" type="text"></td>
+            `;
+            document.getElementById("item-button-submit").innerHTML = `
+                <input id="button-submit" class="p-1" type="button" value="送信">
+            `;
+        }
+
         const select_team = document.getElementById("select-team");
         const select_runner = document.getElementById("select-runner");
         const select_work = document.getElementById("select-work");
@@ -15,6 +24,7 @@ fetch("/official-page/data/all-clear-score.json")
         const select_continue = document.getElementById("select-continue");
         const span_formula = document.getElementById("span-formula");
         const span_score = document.getElementById("span-score");
+        const input_url = document.getElementById("input-url");
         const button_submit = document.getElementById("button-submit");
 
         const diff_map = {
@@ -39,39 +49,41 @@ fetch("/official-page/data/all-clear-score.json")
             span_score.innerText = score;
         }
 
-        button_submit.onclick = () => {
-            const team = select_team.value;
-            let content = team;
-            content += " : ";
-            content += span_score.innerText;
-            content += "\n";
-            content += select_work.options[select_work.selectedIndex].text;
-            content += " ";
-            content += select_difficult.value;
-            content += " ";
-            content += select_player.value;
-            content += " ";
-            content += select_rest.value;
-            if (select_runner.value === "first") {
-                content += " continue=";
-                content += select_continue.value;
-            }
-            const body = {
-                "username": team,
-                "content": content
-            };
-            fetch(
-                input_url.value,
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(body),
+        if (button_submit !== null && button_submit !== undefined) {
+            button_submit.onclick = () => {
+                const team = select_team.value;
+                let content = team;
+                content += " : ";
+                content += span_score.innerText;
+                content += "\n";
+                content += select_work.options[select_work.selectedIndex].text;
+                content += " ";
+                content += select_difficult.value;
+                content += " ";
+                content += select_player.value;
+                content += " ";
+                content += select_rest.value;
+                if (select_runner.value === "first") {
+                    content += " continue=";
+                    content += select_continue.value;
                 }
-            )
-                .then(() => alert("[submitted]\n" + content))
-                .catch(() => alert("error"));
+                const body = {
+                    "username": team,
+                    "content": content
+                };
+                fetch(
+                    input_url.value,
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(body),
+                    }
+                )
+                    .then(() => alert("[submitted]\n" + content))
+                    .catch(() => alert("error"));
+            }
         }
 
         select_runner.onchange = (e) => {
@@ -116,13 +128,6 @@ fetch("/official-page/data/all-clear-score.json")
         select_player.onchange = () => update_score();
         select_rest.onchange = () => update_score();
         select_continue.onchange = () => update_score();
-
-        if (new URL(window.location.href).searchParams.get("for") !== "refree") {
-            const for_refrees = document.getElementsByClassName("for-refree");
-            for (const for_refree of for_refrees) {
-                for_refree.style.display = "none";
-            }
-        }
 
         update_score();
 
