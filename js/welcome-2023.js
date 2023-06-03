@@ -6,6 +6,15 @@ fetch("/official-page/data/all-clear-score.json")
     .then(score_table => {
 
         if (new URL(window.location.href).searchParams.get("for") === "refree") {
+            document.getElementById("tr-select-team").innerHTML = `
+                <td class="w-0 nowrap">チーム</td>
+                <td>
+                    <select id="select-team">
+                        <option>Team Red</option>
+                        <option>Team White</option>
+                    </select>
+                </td>
+            `;
             document.getElementById("item-input-url").innerHTML = `
                 <td class="w-0 nowrap">送信先URL</td>
                 <td><input id="input-url" class="w-f" type="text"></td>
@@ -123,7 +132,7 @@ fetch("/official-page/data/all-clear-score.json")
             update_score();
         };
 
-        select_team.onchange = () => update_score();
+        if (select_team) select_team.onchange = () => update_score();
         select_difficult.onchange = () => update_score();
         select_player.onchange = () => update_score();
         select_rest.onchange = () => update_score();
