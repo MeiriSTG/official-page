@@ -44,6 +44,10 @@ hr {
     width: 0;
 }
 
+.m-3 {
+    margin: 3rem;
+}
+
 .ml-1 {
     margin-left: 1rem;
 }
@@ -189,6 +193,10 @@ div.holder-content {
     /* header */
 
     #header {
+        display: none;
+    }
+
+    #spacer {
         display: none;
     }
 

@@ -1,8 +1,11 @@
+//! ヘッダーを作成するスクリプト
+//! ヘッダーの裏にスペーサを作成する
+
 // a function to create a header and append it into body.
 function create_header(current, root) {
     const links = [
         ["index.html", "ホーム"],
-        ["sub/welcome-2023.html", "明理新歓大会 2023"],
+        ["sub/meiricup-03.html", "東方明理杯・参"],
         ["sub/tool.html", "ツール"],
         ["sub/archive.html", "過去の試合"],
         ["sub/credit.html", "クレジット"],
@@ -30,4 +33,10 @@ function create_header(current, root) {
         if (current === link[1]) a.style.fontWeight = "bold";
         div.appendChild(a);
     }
+
+    const spacer = document.createElement("div");
+    spacer.id = "spacer";
+    spacer.style.minHeight = header.clientHeight + "px";
+    spacer.style.backgroundColor = "black";
+    document.body.appendChild(spacer);
 }
