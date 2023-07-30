@@ -1,3 +1,6 @@
+//! サイドバー(とヘッダー)を作成するスクリプト
+//! ヘッダーの裏にスペーサを作成する
+
 // a function to create a sidebar and something related it and append them into body.
 function create_sidebar(current, root) {
     const links = [
@@ -65,4 +68,10 @@ function create_sidebar(current, root) {
     a_title.href = root + "index.html";
     a_title.innerText = "MeiriSTG 公式サイト";
     title.appendChild(a_title);
+
+    const spacer = document.createElement("div");
+    spacer.id = "spacer-sidebar";
+    spacer.style.minHeight = header_narrow.clientHeight + "px";
+    spacer.style.backgroundColor = "black";
+    document.body.appendChild(spacer);
 }

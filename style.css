@@ -102,7 +102,7 @@ div.holder-content {
 #main {
     max-width: 1100px;
     margin: 0 auto;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 /* header */
@@ -193,10 +193,6 @@ div.holder-content {
     /* header */
 
     #header {
-        display: none;
-    }
-
-    #spacer {
         display: none;
     }
 
