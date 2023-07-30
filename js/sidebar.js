@@ -2,7 +2,7 @@
 function create_sidebar(current, root) {
     const links = [
         ["index.html", "ホーム"],
-        ["sub/welcome-2023.html", "明理新歓大会 2023"],
+        ["sub/meiricup-03.html", "東方明理杯・参"],
         ["sub/tool.html", "ツール"],
         ["sub/archive.html", "過去の試合"],
         ["sub/credit.html", "クレジット"],
