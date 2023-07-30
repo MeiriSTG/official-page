@@ -110,7 +110,7 @@ const SCORES = [
   },
   {
     "霊夢": [14, 19, 15, 32],
-    "魔理沙": [15, 22, 15, 80],
+    "魔理沙": [15, 22, 16, 80],
     "早苗": [12, 17, 13, 64],
     "鈴仙": [12, 16, 12, 80]
   },
@@ -243,7 +243,7 @@ function init() {
     for (const [char, arr] of Object.entries(SCORES[i])) {
       tdss.push([char].concat(arr));
     }
-    if (tdss[0].length === 6) ths.push('NMNBFS');
+    if (tdss[0].length === 6) ths.push('NNFS(Hard,Lunatic)');
     const table = createTable(ths, tdss);
     table.style.tableLayout = 'fixed';
     main.appendChild(table);
