@@ -8,6 +8,7 @@ function create_sidebar(current, root) {
         ["sub/meiricup-03.html", "東方明理杯・参"],
         ["sub/archive.html", "過去の試合"],
         ["sub/credit.html", "クレジット"],
+        ["sub/tools.html", "ツール"],
     ];
 
     const sidebar_background = document.createElement("div");
