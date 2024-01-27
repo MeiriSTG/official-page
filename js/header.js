@@ -5,8 +5,10 @@
 function create_header(current, root) {
     const links = [
         ["index.html", "ホーム"],
+        ["sub/meiricup-04.html", "東方明理杯・肆"],
         ["sub/archive.html", "過去の試合"],
         ["sub/credits.html", "クレジット"],
+        ["sub/fund.html", "支援"],
         ["sub/tools.html", "ツール"],
     ];
 
