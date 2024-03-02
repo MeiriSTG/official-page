@@ -8,7 +8,7 @@ function create_sidebar(current, root) {
         <!--["sub/meiricup-04.html", "東方明理杯・肆"],-->
         ["sub/archive.html", "過去の試合"],
         ["sub/credits.html", "クレジット"],
-        <!--["sub/fund.html", "支援"],-->
+        ["sub/fund.html", "支援"],
         ["sub/tools.html", "ツール"],
     ];
 
