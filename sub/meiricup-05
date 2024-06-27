@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosansjp.css">
+<link rel="stylesheet" href="../style.css">
+<title>東方明理杯・伍：MeiriSTG 公式サイト</title>
+
+<body>
+  <script src="../js/header.js"></script>
+  <script src="../js/sidebar.js"></script>
+  <script>
+    create_header("東方明理杯・伍", "../");
+    create_sidebar("東方明理杯・伍", "../");
+  </script>
+  <script src="../js/change_color.js"></script>
+
+  <h1 class="center">東方明理杯・伍</h1>
+
+  <!--
+  <div class="band">
+    <h2 class="center">hogehoge</h2>
+  </div>
+  -->
+  
+  <div id="main">
+    <h3>大会概要</h3>
+
+    <p>東方明理杯・伍（とうほうめいりかっぷ・ご）は、東方明治楼及び東方理學団のメンバーを中心とするプレイヤーの交流を目的とした、東方STGの大会です。</p>
+    <p>本大会はチーム戦です。各試合はチームの代表選手によるリアルタイム並走形式で行われます。</p>
+    <p>STGにあまり自信のない方が安心してご参加いただけるよう、初心者🔰エントリーが可能です。</p>
+    <p>大会の様子はYouTube Liveにて限定公開します。是非コメントで大会を盛り上げてください！</p>
+    <p>東方明理杯・伍　主催一同</p>
+
+    <hr>
+
+    <h3>期間</h3>
+
+    <p>hogehoge</p>
+
+    <hr>
+
+    <h3>参加費</h3>
+
+    <p>hogehoge</p>
+
+    <hr>
+
+    <h3>募集担当と主な役割</h3>
+
+    <ul>
+      <li>審判・・・試合の総括（責任者）、試合の審判</li>
+      <li>実況・・・試合の実況、プレイの解説（任意）</li>
+      <li>選手・・・ゲームのプレイ</li>
+    </ul>
+
+    <hr>
+
+    <h3>参加条件（複数該当する場合はすべてを満たすこと）</h3>
+
+    <ul>
+      <li>［実況］担当希望作品（試合）のシステムをおおよそ理解していること。</li>
+      <li>［審判］担当希望作品（試合）のシステムを理解していること。</li>
+      <li>［選手］DiscordのGo Live機能を使用してゲーム画面を常に配信できること（音声含む）。</li>
+      <li>［選手－1CC］出場希望試合と同一難易度におけるすべての機体（ルート）で1CCを達成できること。</li>
+      <li>［選手－No Bomb］1CCに最低４試合エントリーすること。</li>
+      <li>［選手－No Bomb］出場希望試合と同一難易度におけるすべての機体（ルート）でNo Bombを達成できること。</li>
+      <li>［選手］最後まであきらめずにプレイできること。</li>
+      <li>［外部］主催より招待を受けること。</li>
+    </ul>
+
+    <hr>
+
+    <h3>ルール</h3>
+    
+    <p><a href="https://docs.google.com/document/d/19cQZW9XCriINBW-pExeQxnEl-EkzMknKoUyonhpmFTw/edit?usp=sharing">こちら</a>をご覧ください。</p>
+
+    <hr>
+    
+    <h3>基礎点・制限時間</h3>
+
+    <p><a href="https://meiristg.github.io/score-calculator/">制限時間・基礎点表</a>をご覧ください。</p>
+
+    <hr>
+
+    <h3>エントリー</h3>
+
+    <p>hogehoge受付開始</p>
+    <!--<p><a href="https://meiristg.github.io/forms/">こちら</a>からエントリーフォームに回答してください（2/3 24:00締切）。</p>-->
+  </div>
+</body>
