@@ -24,13 +24,15 @@ function create_sidebar(current, root) {
     const close_icon = document.createElement("div");
     close_icon.id = "sidebar-icon-close";
     close_icon.innerText = "×";
-    close_icon.ontouchend = () => {
+    close_icon.ontouchend = (e) => {
         sidebar.style.display = "none";
         sidebar_background.style.display = "none";
+        e.preventDefault();
     };
-    close_icon.onclick = () => {
+    close_icon.onclick = (e) => {
         sidebar.style.display = "none";
         sidebar_background.style.display = "none";
+        e.preventDefault();
     };
     sidebar.appendChild(close_icon);
 
@@ -52,13 +54,15 @@ function create_sidebar(current, root) {
     const open_icon = document.createElement("div");
     open_icon.id = "sidebar-icon-open";
     open_icon.innerText = "☰";
-    open_icon.ontouchend = () => {
+    open_icon.ontouchend = (e) => {
         sidebar.style.display = "block";
         sidebar_background.style.display = "block";
+        e.preventDefault();
     };
-    open_icon.onclick = () => {
+    open_icon.onclick = (e) => {
         sidebar.style.display = "block";
         sidebar_background.style.display = "block";
+        e.preventDefault();
     };
     header_narrow.appendChild(open_icon);
 
